@@ -57,3 +57,22 @@ body{
     align-items: center;
     height: 35px;    
 }
+
+.swal-title {
+    margin: 0px;
+    font-size: 24px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
+    margin-bottom: 28px;
+}
+
+.swal-text {
+    padding: 17px;
+    display: block;
+    margin: 22px;
+    text-align: center;
+    color: #61534e;
+}
+
+.swal-overlay {
+    background-color: rgba(43, 165, 137, 0.45);
+}
