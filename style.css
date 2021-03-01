@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --widht: 560px; /*630 490 */
+    /* --heigth: 560px; */
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-image: url(./sport-blue-ball-poster.jpg);    */
+    /* background-image: url(./sport.jpg); */
+    background-image: url(./img/ee66bf512ebff05c91c83c9d77ab09b5.jpg);
+    background-size: cover;
+}
+
+.title{
+    color: firebrick;
+    font-size: 50px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    margin: 1%;
+}
+
+.fas{
+    padding: 2%;
+}
+
+.nav-top{   
+    width: 560px;
+    justify-content: space-between;
+}
+
+.nav-top-text{
+    display: flex;
+    width: 50%;
+}
+
+.nav-top-text-puntos{
+    margin-left: 20px;
+}
+.nav-top-icon{
+    width: 10%;
+}
+.timer{
+    width: 100px;
+    justify-content: space-evenly;
+}
+.box{
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    height: 35px;    
+}
