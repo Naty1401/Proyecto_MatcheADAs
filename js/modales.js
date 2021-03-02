@@ -1,9 +1,4 @@
 const bienvenida = () => {
-    // swal('¡Bienvenida!', "En MatcheADAs tu objetivo es juntar 3 o mas items del mismo tipo, ya sea en fila o en columna. Para eso selecciona un ítem y a continuación un ítem adyaceente para intercambiarlos de lugar. Si se forma un grupo, esos ítems se eliminarán y ganarás puntos. ¡Sigue armando grupos de 3 o mas hasta que se acabe el tiempo! Controles ", {   
-    //     button : "A Jugar " , 
-    // } )
-    
-    // .then(niveles)
     swal({
         title: '¡Bienvenida!',
         text: `En MatcheADAs tu objetivo es juntar 3 o mas items del mismo tipo, ya sea en fila o en columna. Para eso selecciona un ítem y a continuación un ítem adyaceente para intercambiarlos de lugar. 
@@ -14,7 +9,7 @@ const bienvenida = () => {
         button: "A Jugar " ,
     })
     .then(niveles)
- } ;
+} ;
 
 const niveles = () => {
     swal("Nuevo Juego", "Selecciona una dificultad", {
@@ -56,17 +51,46 @@ const niveles = () => {
     })
     }
 
-// const reiniciar = () => {
-//     swal({
-//         title: ball,
-//         text: blalabala,
-//         buttons: {
-//             cancel: true,
-//             //confirm: "Confirm",
-//             roll: {
-//             text: "Nuevo juego",
-//             value: "roll",
-//           },
-//         },
-//       });
-//     }
+const reiniciar = () => {
+swal({
+            title: "Reiniciar juego?",
+            text: "Perderás todo tu puntaje acumulado",
+            buttons: {
+                cancel: 'Cancelar',
+                confirm: 'Nuevo juego'
+                },
+        })
+    .then((value) => {
+        switch (value) {
+            case null:
+                //debe parar el reloj del timer
+            break;
+            case true:
+                niveles();
+            break
+        }
+    })
+};
+
+/*
+const gameOver = () => {
+    swal({
+        title: "¡Juego termiando!",
+        text: "Puntaje final: ",
+        buttons: {
+            confirm: 'Nuevo juego', //true
+            cancel: 'Reiniciar' //null
+            },
+    })
+.then((value) => {
+    switch (value) {
+        case null:
+            //deberia generar la grilla en el mismo nivel en el q estaba
+        break;
+        case true:
+            niveles();
+        break
+    }
+})
+}
+*/
