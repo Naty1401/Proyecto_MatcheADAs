@@ -107,7 +107,7 @@ body{
  /*Modales*/
 .swal-title {
     margin: 0px;
-    font-size: 24px;
+    font-size: 34px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
     margin-bottom: 28px;
 }
@@ -117,7 +117,8 @@ body{
     display: block;
     margin: 22px;
     text-align: center;
-    color: #61534e;
+    color: rebeccapurple;
+    font-size: 25px;
 }
 
 .swal-overlay {

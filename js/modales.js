@@ -49,7 +49,7 @@ const niveles = () => {
 const reiniciar = () => {
     stopTimer()
 swal({
-            title: "Reiniciar juego?",
+            title: "¿Reiniciar juego?",
             text: "Perderás todo tu puntaje acumulado",
             buttons: {
                 cancel: 'Cancelar',
