@@ -9,7 +9,7 @@ const bienvenida = () => {
         button: "A Jugar " ,
     })
     .then(niveles)
-} ;
+};
 
 const niveles = () => {
     swal("Nuevo Juego", "Selecciona una dificultad", {
@@ -32,10 +32,7 @@ const niveles = () => {
     .then((value) =>{
         switch (value) {
             case "facil":
-                generarGrilla(9)
-                //document.documentElement.style.setProperty('--width', '630px');
-                //grid.style.width = "630px"
-                //grid.style.height = "630px"    
+                generarGrilla(9)  
                 break;
     
             case "medio":
@@ -44,14 +41,13 @@ const niveles = () => {
     
             case "dificil":
                 generarGrilla(7)
-                // grid.style.width = "490px"
-                // grid.style.height = "490px"
                 break;
         }
     })
     }
 
 const reiniciar = () => {
+    stopTimer()
 swal({
             title: "Reiniciar juego?",
             text: "Perderás todo tu puntaje acumulado",
@@ -72,8 +68,9 @@ swal({
     })
 };
 
-/*
+
 const gameOver = () => {
+    stopTimer()
     swal({
         title: "¡Juego termiando!",
         text: "Puntaje final: ",
@@ -93,4 +90,3 @@ const gameOver = () => {
     }
 })
 }
-*/

@@ -12,7 +12,10 @@ window.onload = bienvenida();
 const cuadricula = []
 const ball = ['⚽', '🥎', '🏀', '🏐', '🏈', '\uD83C\uDFBE']
 
+let seconds
+
 function generarGrilla(width) {
+    seconds = 5
     while (grid.firstChild) {
         grid.removeChild(grid.firstChild);
     }
@@ -31,4 +34,24 @@ function generarGrilla(width) {
         twemoji.parse(document.body);
         }
     }
+    startTimer = setInterval(time, 1000);
+    return
 };
+
+
+const timer = document.getElementById('timer');
+
+const time = () => {
+    
+    if(seconds >= 0){
+        timer.innerHTML = seconds
+        seconds--
+    }
+    else{
+        gameOver()
+    }
+}
+
+const stopTimer = () => {
+    clearInterval(startTimer);
+}
