@@ -8,8 +8,16 @@ const bienvenida = () => {
         Controles`,
         button: "A Jugar " ,
     })
-    .then(niveles)
-};
+    .then((x) => {
+        if (llamarModal) {
+            niveles();
+            return llamarModal = false;
+        } else if (!llamarModal){
+          //timer(pause);
+        }
+    });
+    //stopTimer()
+} ;
 
 const niveles = () => {
     swal("Nuevo Juego", "Selecciona una dificultad", {
@@ -82,6 +90,7 @@ const gameOver = () => {
 .then((value) => {
     switch (value) {
         case null:
+            generarGrilla(dificultad)
             //deberia generar la grilla en el mismo nivel en el q estaba
         break;
         case true:
